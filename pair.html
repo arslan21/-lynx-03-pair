@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <template id="timer">
+        <button v-on:click="timer" type="button" name="button">start</button>
+        <div class="timer">
+          <span>{{ timerHours }}</span>:<span>{{ timerMinutes }}</span>:<span>{{ timerSeconds }}</span>
+        </div>
+      </template>
+      <div class="desk">
+        <cell
+          v-for="(item, index) in items"
+          v-bind:style="{ backgroundColor: items[index].color }"
+          >
+        </cell>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>
